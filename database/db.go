@@ -2,6 +2,7 @@ package database
 
 import (
 	"log"
+	"fmt"
 	"os"
 	"github.com/guilhermeonrails/api-go-gin/models"
 	"gorm.io/driver/postgres"
