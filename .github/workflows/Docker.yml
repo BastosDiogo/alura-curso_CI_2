@@ -17,3 +17,11 @@ jobs:
         # Username used to log against the Docker registry
         username: bastosdiogo
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
+
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v3.0.0
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: bastosdiogo/testeci
