@@ -3,9 +3,9 @@ services:
   postgres:
     image: "postgres"
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root      
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: root
     ports:
       - "5432:5432"
     volumes:
@@ -21,3 +21,5 @@ services:
     depends_on:
       - postgres
 
+volumes:
+  postgres_data: {}
