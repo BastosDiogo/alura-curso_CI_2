@@ -46,6 +46,14 @@ jobs:
     - name: Build
       run: go build -v main.go
 
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.2
+      with:
+    # Artifact name
+        name: programa
+    # A file, directory or wildcard pattern that describes what to upload
+        path: main
+
   Docker:
     needs: build
     uses: ./.github/workflows/Docker.yml
