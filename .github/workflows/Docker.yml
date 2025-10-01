@@ -25,3 +25,9 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: bastosdiogo/testeci
+
+    - name: Upload main compilado
+      uses: actions/upload-artifact@v3
+      with:
+        name: programa
+        path: main
